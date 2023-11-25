@@ -1,0 +1,18 @@
+﻿@model IEnumerable<SmartCart.Models.Produto>
+
+<div>
+    <h2>Veja nossos produtos disponíveis</h2>
+</div>
+
+@foreach(var Produto in Model)
+{
+    <div>
+        <h4>@Produto.ProdutoNome: @Produto.ProdutoDescricaoCurta
+        </h4>
+        <p><img src="@Produto.ImgThumbnaiUrl"></p>
+        <p>Preço : @Produto.ProdutoPreco.ToString("c")</p>
+    </div>
+}
+
+
+
